@@ -119,7 +119,7 @@ npm start
 
 ## Deployment
 
-**Vercel 배포 URL:** (배포 후 여기에 URL 입력)
+**Vercel 배포 URL:** https://react-todo-list-jin030121.vercel.app
 
 GitHub Repository를 Vercel에 연결해 배포했다. 이후 GitHub에 변경 사항을 Push하면 Vercel에서 자동으로 다시 배포되는 방식이다.
 
