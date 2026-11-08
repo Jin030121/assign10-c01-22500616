@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 
-function TodoList() {
-    const initialTodos = [
-        { id: 1, text: '리액트 컴포넌트 구조 공부하기', isComplete: false },
-        { id: 2, text: '오픈소스 프로젝트 커스터마이징', isComplete: false },
-        { id: 3, text: 'Vercel에 프로젝트 배포하기', isComplete: false },
-    ];
+const initialTodos = [
+    { id: 1, text: '리액트 컴포넌트 구조 공부하기', isComplete: false },
+    { id: 2, text: '오픈소스 프로젝트 커스터마이징', isComplete: false },
+    { id: 3, text: 'Vercel에 프로젝트 배포하기', isComplete: false },
+];
 
+function TodoList() {
     const [todos, setTodos] = useState([]);
 
     const LOCAL_STORAGE_KEY = "react-do-list-todos";
@@ -17,10 +17,11 @@ function TodoList() {
         const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 
         if (storageTodos && storageTodos.length > 0) {
-            setTodos(storageTodos)
+            setTodos(storageTodos);
         } else {
             setTodos(initialTodos);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
